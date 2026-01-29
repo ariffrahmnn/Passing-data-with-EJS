@@ -16,7 +16,16 @@ app.get("/", (req, res) => {
   res.render("index.ejs", data);
 });
 
-app.post("/submit", (req, res) => {});
+app.post("/submit", (req, res) => {
+
+  let wordOfName = req.body["fName"] + req.body["lName"];
+  let fullname = wordOfName.length;
+
+  const result = {
+    title: `Length of your name is ${fullname}`
+  };
+  res.render("index.ejs", result)
+});
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
