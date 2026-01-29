@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
   const data = {
-    title: "Input your name here"
+    title: "Input your name here!!"
   }
   res.render("index.ejs", data);
 });
@@ -21,10 +21,9 @@ app.post("/submit", (req, res) => {
   let wordOfName = req.body["fName"] + req.body["lName"];
   let fullname = wordOfName.length;
 
-  const result = {
-    title: `Length of your name is ${fullname}`
-  };
-  res.render("index.ejs", result)
+  res.render("index.ejs", {
+    finalNumbers: fullname
+  });
 });
 
 app.listen(port, () => {
