@@ -9,7 +9,12 @@ app.set("view engine", "ejs")
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get("/", (req, res) => {});
+app.get("/", (req, res) => {
+  const data = {
+    title: "Input your name here"
+  }
+  res.render("index.ejs", data);
+});
 
 app.post("/submit", (req, res) => {});
 
