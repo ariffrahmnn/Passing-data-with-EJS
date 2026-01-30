@@ -8,10 +8,15 @@
 </head>
 
 <body>
-   <%  if (locals.finalNumbers) { %>
+  <!-- EJS Implementation -->
+   <%  if (locals.dynamicNumber) { %>
+
     <h1>There are <%= finalNumbers %> words in your name!</h1>
+
    <% } else { %>
+
     <h1>Input your name here</h1>
+
    <%}%>
 
   <form action="/submit" method="POST">
