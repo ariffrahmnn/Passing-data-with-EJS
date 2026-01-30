@@ -23,15 +23,18 @@ app.get("/", (req, res) => {
   res.render("index.ejs", data);
 });
 
+function amountOfNameWords (first, second) {
+  return first + second;
+}
+
 //POST
 app.post("/submit", (req, res) => {
 
   //Initiate varaibles
-  let wordOfName = req.body["fName"] + req.body["lName"];
-  let fullname = wordOfName.length;
+  const wordOfName = amountOfNameWords(req.body["fName"], req.body["lName"]).length;
 
   res.render("index.ejs", {
-    dynamicNumber: fullname
+    dynamicNumberChanging: wordOfName
   });
 
 });
