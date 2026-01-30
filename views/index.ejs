@@ -12,7 +12,8 @@
    <%  if (locals.dynamicNumberChanging) { %>
 
     <h1>There are <%= dynamicNumberChanging %> words in your name!</h1>
-
+    <h1>There are <%= dynamicNumberChanging2 %> words in your name!</h1>
+    
    <% } else { %>
 
     <h1>Input your name here</h1>
@@ -22,6 +23,8 @@
   <form action="/submit" method="POST">
     <input type="text" name="fName" placeholder="First name">
     <input type="text" name="lName" placeholder="Last name">
+    <input type="text" name="f2Name" placeholder="First name2">
+    <input type="text" name="l2Name" placeholder="Last name2">
     <input type="submit" value="OK">
   </form>
 </body>

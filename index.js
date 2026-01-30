@@ -32,9 +32,11 @@ app.post("/submit", (req, res) => {
 
   //Initiate varaibles
   const wordOfName = amountOfNameWords(req.body["fName"], req.body["lName"]).length;
+  const wordOfName2 = amountOfNameWords(req.body["f2Name"], req.body["l2Name"]).length;
 
   res.render("index.ejs", {
-    dynamicNumberChanging: wordOfName
+    dynamicNumberChanging: wordOfName,
+    dynamicNumberChanging2: wordOfName2
   });
 
 });
