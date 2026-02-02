@@ -23,3 +23,5 @@
 - Store submitted data in a database
 - Improve UI with CSS or Bootstrap styling
 - Add animations or visual effects when results appear
+
+Note: This tutorial is not originally from me. This based on tutorial by Dr. Angela Yu ❤
